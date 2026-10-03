@@ -1,0 +1,32 @@
+{
+  "name": "spreadsheet-audit-mcp",
+  "version": "0.1.0",
+  "description": "MCP server that audits .xlsx workbooks for formula and model errors: typed-over formulas, pattern breaks, error values after independent recalculation, magic numbers, volatile functions, external links, hidden sheets. Local and read-only.",
+  "main": "server.mjs",
+  "scripts": {
+    "test": "python test_audit.py && node test-client.mjs",
+    "start": "node server.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "excel",
+    "xlsx",
+    "spreadsheet",
+    "audit",
+    "claude"
+  ],
+  "author": "sahan411",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.0",
+    "zod": "^4.6.5"
+  },
+  "bin": {
+    "spreadsheet-audit-mcp": "server.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
